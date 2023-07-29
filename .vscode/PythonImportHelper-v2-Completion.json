@@ -1,0 +1,200 @@
+[
+    {
+        "label": "pygame,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame.",
+        "description": "pygame.",
+        "detail": "pygame.",
+        "documentation": {}
+    },
+    {
+        "label": "cria_labirinto",
+        "kind": 2,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "def cria_labirinto(a, b):\n    labirinto[a][b] = 1\n    direcao = [(0, 2), (2, 0), (0, -2), (-2, 0)]\n    random.shuffle(direcao)\n    for ab, ba in direcao:\n        x, y = a + ab, b + ba\n        if x >= 0 and x < largura_labirinto and y >= 0 and y < altura_labirinto and labirinto[x][y] == 0:\n            labirinto[a + ab // 2][b + ba // 2] = 1\n            cria_labirinto(x, y)\n# configuração do labirinto",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "largura_tela",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "largura_tela = 800\naltura_tela = 600\ntamanho_celula = 40\n# inicializa o Pygame\npygame.init()\ntela = pygame.display.set_mode((largura_tela, altura_tela))\npygame.display.set_caption(\"labirinto\")\nclock = pygame.time.Clock()\n# criação do labirinto com função recursiva. Função utilizando o algoritmo de busca em profundidade\ndef cria_labirinto(a, b):",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "altura_tela",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "altura_tela = 600\ntamanho_celula = 40\n# inicializa o Pygame\npygame.init()\ntela = pygame.display.set_mode((largura_tela, altura_tela))\npygame.display.set_caption(\"labirinto\")\nclock = pygame.time.Clock()\n# criação do labirinto com função recursiva. Função utilizando o algoritmo de busca em profundidade\ndef cria_labirinto(a, b):\n    labirinto[a][b] = 1",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "tamanho_celula",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "tamanho_celula = 40\n# inicializa o Pygame\npygame.init()\ntela = pygame.display.set_mode((largura_tela, altura_tela))\npygame.display.set_caption(\"labirinto\")\nclock = pygame.time.Clock()\n# criação do labirinto com função recursiva. Função utilizando o algoritmo de busca em profundidade\ndef cria_labirinto(a, b):\n    labirinto[a][b] = 1\n    direcao = [(0, 2), (2, 0), (0, -2), (-2, 0)]",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "tela",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "tela = pygame.display.set_mode((largura_tela, altura_tela))\npygame.display.set_caption(\"labirinto\")\nclock = pygame.time.Clock()\n# criação do labirinto com função recursiva. Função utilizando o algoritmo de busca em profundidade\ndef cria_labirinto(a, b):\n    labirinto[a][b] = 1\n    direcao = [(0, 2), (2, 0), (0, -2), (-2, 0)]\n    random.shuffle(direcao)\n    for ab, ba in direcao:\n        x, y = a + ab, b + ba",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "clock",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "clock = pygame.time.Clock()\n# criação do labirinto com função recursiva. Função utilizando o algoritmo de busca em profundidade\ndef cria_labirinto(a, b):\n    labirinto[a][b] = 1\n    direcao = [(0, 2), (2, 0), (0, -2), (-2, 0)]\n    random.shuffle(direcao)\n    for ab, ba in direcao:\n        x, y = a + ab, b + ba\n        if x >= 0 and x < largura_labirinto and y >= 0 and y < altura_labirinto and labirinto[x][y] == 0:\n            labirinto[a + ab // 2][b + ba // 2] = 1",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "largura_labirinto",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "largura_labirinto = largura_tela // tamanho_celula\naltura_labirinto = altura_tela // tamanho_celula\n# cria matriz do labirinto\nlabirinto = [[0] * altura_labirinto for _ in range(largura_labirinto)]\n# Cria as surfaces para os elementos do labirinto\nparabens = pygame.image.load('graficos/parabens.png').convert_alpha()\nbackground = pygame.image.load('graficos/route216.png').convert_alpha()\ngrass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "altura_labirinto",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "altura_labirinto = altura_tela // tamanho_celula\n# cria matriz do labirinto\nlabirinto = [[0] * altura_labirinto for _ in range(largura_labirinto)]\n# Cria as surfaces para os elementos do labirinto\nparabens = pygame.image.load('graficos/parabens.png').convert_alpha()\nbackground = pygame.image.load('graficos/route216.png').convert_alpha()\ngrass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "labirinto",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "labirinto = [[0] * altura_labirinto for _ in range(largura_labirinto)]\n# Cria as surfaces para os elementos do labirinto\nparabens = pygame.image.load('graficos/parabens.png').convert_alpha()\nbackground = pygame.image.load('graficos/route216.png').convert_alpha()\ngrass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "parabens",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "parabens = pygame.image.load('graficos/parabens.png').convert_alpha()\nbackground = pygame.image.load('graficos/route216.png').convert_alpha()\ngrass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "background",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "background = pygame.image.load('graficos/route216.png').convert_alpha()\ngrass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0\njogador_y = 0",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "grass_horizontal",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "grass_horizontal = pygame.image.load('graficos/grass.png').convert_alpha()\nplayer = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0\njogador_y = 0\n# encontra um lugar válido para o destino final",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "player",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "player = pygame.image.load('graficos/guto.png').convert_alpha()\nsuperficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0\njogador_y = 0\n# encontra um lugar válido para o destino final\nlugar_valido = []",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "superficie_g",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "superficie_g = pygame.image.load('graficos/pokeball.png').convert_alpha()\nbackground2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0\njogador_y = 0\n# encontra um lugar válido para o destino final\nlugar_valido = []\nfor i in range(altura_labirinto):",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "background2",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "background2 = pygame.image.load('graficos/Maze.png').convert_alpha()\n# cria o labirinto\ncria_labirinto(0, 0)\n# posição inicial do jogador\njogador_x = 0\njogador_y = 0\n# encontra um lugar válido para o destino final\nlugar_valido = []\nfor i in range(altura_labirinto):\n    for j in range(largura_labirinto):",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "jogador_x",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "jogador_x = 0\njogador_y = 0\n# encontra um lugar válido para o destino final\nlugar_valido = []\nfor i in range(altura_labirinto):\n    for j in range(largura_labirinto):\n        if labirinto[j][i] == 1:\n            lugar_valido.append((j, i))\nsaida_x, saida_y = random.choice(lugar_valido)\n#exibe tela inicial por 2 segundos",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "jogador_y",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "jogador_y = 0\n# encontra um lugar válido para o destino final\nlugar_valido = []\nfor i in range(altura_labirinto):\n    for j in range(largura_labirinto):\n        if labirinto[j][i] == 1:\n            lugar_valido.append((j, i))\nsaida_x, saida_y = random.choice(lugar_valido)\n#exibe tela inicial por 2 segundos\nbackground2 = pygame.transform.scale(background2, (800, 600))",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "lugar_valido",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "lugar_valido = []\nfor i in range(altura_labirinto):\n    for j in range(largura_labirinto):\n        if labirinto[j][i] == 1:\n            lugar_valido.append((j, i))\nsaida_x, saida_y = random.choice(lugar_valido)\n#exibe tela inicial por 2 segundos\nbackground2 = pygame.transform.scale(background2, (800, 600))\ntela.blit(background2, (0, 0))\npygame.display.flip()",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "background2",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "background2 = pygame.transform.scale(background2, (800, 600))\ntela.blit(background2, (0, 0))\npygame.display.flip()\npygame.time.wait(2000)\n# loop principal do jogo\nrodando = True\nfim = False\nwhile rodando:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "rodando",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "rodando = True\nfim = False\nwhile rodando:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            rodando = False\n    # movimentação do jogador\n    keys = pygame.key.get_pressed()\n    if keys[pygame.K_LEFT] and jogador_x > 0 and labirinto[jogador_x - 1][jogador_y] == 1:\n        jogador_x -= 1",
+        "detail": "labirinto",
+        "documentation": {}
+    },
+    {
+        "label": "fim",
+        "kind": 5,
+        "importPath": "labirinto",
+        "description": "labirinto",
+        "peekOfCode": "fim = False\nwhile rodando:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            rodando = False\n    # movimentação do jogador\n    keys = pygame.key.get_pressed()\n    if keys[pygame.K_LEFT] and jogador_x > 0 and labirinto[jogador_x - 1][jogador_y] == 1:\n        jogador_x -= 1\n    if keys[pygame.K_RIGHT] and jogador_x < largura_labirinto - 1 and labirinto[jogador_x + 1][jogador_y] == 1:",
+        "detail": "labirinto",
+        "documentation": {}
+    }
+]
